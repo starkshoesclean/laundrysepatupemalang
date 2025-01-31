@@ -72,12 +72,24 @@
         }
 
         .hero {
+            position: relative;
             text-align: center;
             padding: 3rem;
             background: url('shoes-cleaning.jpg') no-repeat center center/cover;
             color: white;
             text-shadow: 2px 2px 5px black;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Latar belakang hitam transparan */
+            z-index: -1; /* Menempatkan latar belakang di belakang teks */
         }
 
         .hero h1 {
@@ -97,13 +109,13 @@
 
         .services {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Menampilkan dua kolom */
+            grid-template-columns: repeat(2, 1fr); /* Menampilkan dua kolom di layar besar */
             gap: 1.5rem;
         }
 
         @media (max-width: 768px) {
             .services {
-                grid-template-columns: repeat(1, 1fr); /* Menampilkan satu kolom untuk layar lebih kecil */
+                grid-template-columns: repeat(1, 1fr); /* Menampilkan satu kolom pada layar lebih kecil */
             }
         }
 
