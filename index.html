@@ -17,9 +17,9 @@
 
         header {
             display: flex;
-            align-items: center; /* Menyelaraskan logo dan teks secara vertikal */
+            align-items: center;
             justify-content: center;
-            flex-direction: column; /* Mengatur layout header menjadi kolom di ponsel */
+            flex-direction: row;
             background: linear-gradient(to right, #0d47a1, #f06292);
             color: white;
             padding: 1.5rem;
@@ -27,20 +27,20 @@
         }
 
         header img {
-            width: 80px; /* Ukuran logo lebih kecil */
+            width: 90px;
             height: auto;
-            margin-bottom: 1rem; /* Memberikan jarak antara logo dan teks */
+            margin-right: 1rem;
         }
 
         header .header-text {
-            text-align: center; /* Menyelaraskan teks agar berada di tengah */
+            text-align: left;
         }
 
         header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3rem; /* Ukuran font judul lebih besar */
+            font-size: 2.8rem;
             font-weight: bold;
-            margin: 0; /* Menghapus margin agar rapat dengan logo */
+            margin: 0;
         }
 
         header p {
@@ -48,92 +48,32 @@
             font-size: 1.2rem;
             font-weight: 300;
             color: #f1f1f1;
-            margin: 0; /* Menghapus margin untuk lebih rapat */
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #1a237e;
-            padding: 1rem;
-        }
-
-        nav a {
-            color: white;
-            padding: 1rem 1.5rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
-
-        .hero {
-            position: relative;
-            text-align: center;
-            padding: 3rem;
-            background: url('shoes-cleaning.jpg') no-repeat center center/cover;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Latar belakang hitam transparan */
-            z-index: -1; /* Menempatkan latar belakang di belakang teks */
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-        }
-
-        .container {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Menampilkan dua kolom di layar besar */
-            gap: 1.5rem;
+            margin: 0;
         }
 
         @media (max-width: 768px) {
-            /* Mengatur ulang header agar lebih responsif di ponsel */
             header {
-                flex-direction: column; /* Header menjadi kolom di ponsel */
-                padding: 1rem; /* Mengurangi padding untuk ponsel */
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
             }
 
             header img {
-                width: 60px; /* Ukuran logo lebih kecil di ponsel */
-                margin-bottom: 0.5rem; /* Mengurangi jarak logo dan teks */
+                width: 70px;
+                margin-bottom: 0.5rem;
+                margin-right: 0;
+            }
+
+            header .header-text {
+                text-align: center;
             }
 
             header h1 {
-                font-size: 2.5rem; /* Ukuran judul lebih kecil di ponsel */
+                font-size: 2rem;
             }
 
             header p {
-                font-size: 1rem; /* Ukuran tagline lebih kecil di ponsel */
-            }
-
-            .services {
-                grid-template-columns: 1fr; /* Mengubah layanan menjadi satu kolom pada layar kecil */
+                font-size: 1rem;
             }
         }
     </style>
@@ -142,77 +82,12 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="Stark Shoes Clean Logo"> <!-- Ganti dengan path logo Anda -->
+        <img src="logo.png" alt="Stark Shoes Clean Logo">
         <div class="header-text">
             <h1>STARK SHOES CLEAN</h1>
             <p>Layanan Perawatan Premium untuk Sepatu, Tas, Helm, dan Stroller Kesayangan Anda</p>
         </div>
     </header>
-
-    <nav>
-        <a href="#about">Tentang Kami</a>
-        <a href="#services">Layanan</a>
-        <a href="#contact">Kontak</a>
-    </nav>
-
-    <section class="hero">
-        <h1>Ahli Perawatan Sepatu & Aksesori dengan Hasil Maksimal dan Berkualitas!</h1>
-        <p>Sepatu, Tas, Helm, atau Stroller Bayi Anda Kusam dan Kotor? Kami Punya Solusinya!</p>
-    </section>
-
-    <section id="about" class="container">
-        <h2>Tentang Kami</h2>
-        <p>Sejak 2021, Stark Shoes Clean telah menjadi spesialis dalam perawatan profesional. Kami menggunakan teknik modern serta bahan berkualitas tinggi untuk mengembalikan kebersihan dan keindahan sepatu, tas, helm, dan stroller Anda.</p>
-    </section>
-
-    <section id="services" class="container">
-        <h2>Layanan Kami</h2>
-        <div class="services">
-            <div class="service">
-                <img src="sneakers-cleaning.jpg" alt="Cuci Sneakers">
-                <h3>Shoes Care</h3>
-                <p>Pembersihan mendalam untuk menghilangkan noda membandel, menjaga kebersihan, dan memperpanjang umur sepatu Anda.</p>
-            </div>
-            <div class="service">
-                <img src="bag-cleaning.jpg" alt="Cuci Tas">
-                <h3>Luxury Bag Treatment</h3>
-                <p>Perawatan eksklusif dengan teknik khusus untuk menjaga warna, bahan, dan tampilan tas premium Anda tetap sempurna.</p>
-            </div>
-            <div class="service">
-                <img src="helmet-cleaning.jpg" alt="Cuci Helm">
-                <h3>Premium Helmet Cleaning</h3>
-                <p>Sanitasi helm dengan teknologi antibakteri canggih, memastikan kebersihan maksimal untuk kenyamanan dan keamanan berkendara.</p>
-            </div>
-            <div class="service">
-                <img src="stroller-cleaning.jpg" alt="Cuci Stroller">
-                <h3>Baby Stroller Cleaning</h3>
-                <p>Perawatan stroller dengan bahan ramah bayi, memastikan kebersihan dan keamanan si kecil setiap saat.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="container">
-        <h2>Kontak Kami</h2>
-        <p>Butuh layanan cepat dan terpercaya? Hubungi kami sekarang!</p>
-        <ul>
-            <li>Email : starkshoesclean@gmail.com</li>
-            <li>WhatsApp : <a href="https://wa.me/message/PMVZKE7K6MXZH1" target="_blank">0856 4780 5800</a></li>
-            <li>Instagram : <a href="https://www.instagram.com/stark.shoesclean" target="_blank">@stark.shoesclean</a></li>
-            <li>Alamat : Stark Shoes Clean, Taman, Pemalang, Jawa Tengah, Indonesia</li>
-        </ul>
-        <h3>Lokasi Kami</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1111.5059921938525!2d109.40361408199311!3d-6.895805624299037!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fdbcc836d90d5%3A0xd70b40ea10af5a7f!2sStark%20Shoes%20Clean!5e0!3m2!1sid!2sid!4v1738250457858!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-    <section id="cta" class="container">
-        <h2>Jangan Biarkan Barang Anda Kotor!</h2>
-        <p>Percayakan pada ahli perawatan profesional. Kami siap memberikan layanan terbaik untuk Anda!</p>
-        <a href="https://wa.me/message/PMVZKE7K6MXZH1" class="cta-button">Hubungi Kami Sekarang di WhatsApp!</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2021 Stark Shoes Clean. Kepercayaan Anda, Prioritas Kami.</p>
-    </footer>
 
 </body>
 
