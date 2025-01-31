@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Stark Shoes Clean</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -23,33 +23,34 @@
             color: white;
             padding: 1.5rem; 
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            flex-wrap: wrap; /* Menyesuaikan elemen saat di layar kecil */
         }
 
         header img {
-            width: 80px; /* Ukuran logo lebih kecil */
+            width: 60px; /* Ukuran logo lebih kecil di perangkat ponsel */
             height: auto;
             margin-right: 1rem;
         }
 
         header .header-text {
-            max-width: 800px; /* Membatasi lebar teks agar tidak terlalu lebar */
-            margin-top: 0; /* Menghapus margin atas */
-            margin-bottom: 0; /* Menghapus margin bawah */
+            max-width: 800px;
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
+            font-size: 2.5rem; /* Ukuran font header lebih kecil di perangkat ponsel */
             font-weight: bold;
-            margin: 0; /* Menghapus margin agar rapat dengan logo */
+            margin: 0;
         }
 
         header p {
             font-family: 'Arial', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1rem; /* Ukuran font deskripsi lebih kecil */
             font-weight: 300;
             color: #f1f1f1;
-            margin: 0; /* Menghapus margin untuk lebih rapat */
+            margin: 0;
         }
 
         nav {
@@ -88,8 +89,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Latar belakang hitam transparan */
-            z-index: -1; /* Menempatkan latar belakang di belakang teks */
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
         }
 
         .hero h1 {
@@ -109,13 +110,13 @@
 
         .services {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Menampilkan dua kolom di layar besar */
+            grid-template-columns: repeat(2, 1fr); /* Dua kolom di layar besar */
             gap: 1.5rem;
         }
 
         @media (max-width: 768px) {
             .services {
-                grid-template-columns: repeat(1, 1fr); /* Menampilkan satu kolom pada layar lebih kecil */
+                grid-template-columns: 1fr; /* Satu kolom di layar kecil */
             }
         }
 
